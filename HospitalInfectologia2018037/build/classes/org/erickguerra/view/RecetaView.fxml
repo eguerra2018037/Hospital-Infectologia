@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#limpiarControles" prefHeight="418.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.erickguerra.controller.RecetaController">
+   <children>
+      <Label layoutX="161.0" layoutY="13.0" text="Recetas" AnchorPane.topAnchor="13.0">
+         <font>
+            <Font name="Agency FB" size="53.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="129.0" text="Codigo Control Cita" AnchorPane.leftAnchor="97.0" AnchorPane.topAnchor="127.0" />
+      <TextField fx:id="txtDescripcion" editable="false" layoutX="110.0" layoutY="77.0" prefHeight="25.0" prefWidth="305.0" AnchorPane.topAnchor="77.0" />
+      <ComboBox fx:id="cmbCodigoControlCita" disable="true" layoutX="211.0" layoutY="123.0" prefHeight="25.0" prefWidth="125.0" AnchorPane.topAnchor="123.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <TableView fx:id="tblRecetas" layoutX="12.0" layoutY="343.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="778.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="167.0">
+         <columns>
+            <TableColumn fx:id="colCodigoReceta" prefWidth="92.0" text="Codigo Receta" />
+            <TableColumn fx:id="colDescripcion" prefWidth="204.0" text="Descripción" />
+            <TableColumn fx:id="colCodigoControlCita" minWidth="0.0" prefWidth="115.0" text="codigoControlCita" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="80.0" fitWidth="75.0" layoutX="283.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/d5vvj7d-b0862043-416d-475d-a9ed-a946a0e1954d.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnNuevo" layoutX="651.0" layoutY="475.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="36.0" prefWidth="59.0" text="Nuevo" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="160.0" />
+      <Button fx:id="btnEliminar" layoutX="710.0" layoutY="475.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="70.0" text="Eliminar" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="90.0" />
+      <Button fx:id="btnEditar" layoutX="780.0" layoutY="475.0" mnemonicParsing="false" onAction="#editar" prefHeight="36.0" prefWidth="70.0" text="Editar" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="20.0" />
+      <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="104.0" layoutY="20.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <image>
+            <Image url="@../images/Regreso.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="64.0" layoutY="127.0" text="Descripción" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="81.0" />
+   </children>
+   <effect>
+      <InnerShadow color="#682c2c" height="31.38" radius="14.817499999999999" width="29.89" />
+   </effect>
+</AnchorPane>

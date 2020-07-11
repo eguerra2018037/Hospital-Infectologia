@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.erickguerra.controller.ProgramadorController">
+   <children>
+      <ImageView fitHeight="208.0" fitWidth="200.0" layoutX="379.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="106.0" AnchorPane.rightAnchor="65.045654296875" AnchorPane.topAnchor="86.0">
+         <image>
+            <Image url="@../images/Programador.jpg" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="32.0" layoutY="133.0" prefHeight="135.0" prefWidth="284.0" AnchorPane.bottomAnchor="133.0" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="133.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="110.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="158.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nombre:" />
+            <Label text="Numero de Carné" GridPane.rowIndex="1" />
+            <Label text="Erick Stiv Junior Guerra Muñoz" GridPane.columnIndex="1" />
+            <Label text="2018037" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Código Técnico" GridPane.rowIndex="2" />
+            <Label text="IN5AM" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Correo Electrónico" GridPane.rowIndex="3" />
+            <Label text="eguerra-2018037@kinal.edu.gt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <ImageView fitHeight="93.0" fitWidth="83.0" layoutX="26.0" layoutY="32.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Regreso.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+   <effect>
+      <InnerShadow color="#682c2c" height="31.38" radius="14.817499999999999" width="29.89" />
+   </effect>
+</AnchorPane>

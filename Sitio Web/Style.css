@@ -1,0 +1,153 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Agency FB;
+	color: #666;
+    background-image: url("Images/Fondo.png");
+	background-attachment: fixed;
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+ 
+h1 {
+	font-size: 2.3em;
+	line-height: 1.3em;
+	margin: 15px;
+	text-align: center;
+	font-weight: 300;
+	color: black;
+}
+ 
+p {
+	margin: 0;
+}
+
+.img-circle {
+	border: 3px solid white;
+	border-radius: 50%;
+	
+}
+
+form {
+	text-align: center;
+	margin-top: 0;
+}
+.submit {
+	background-color: #2E2E2E;
+	padding: 12px 45px;
+	border-radius: 5px;
+	border-width: 1.5px;
+	border-color: black;
+	cursor: pointer;
+	color: #ffffff;
+	margin: 0;
+	font-weight: bold;
+}
+.submit:hover {
+	background-color: #43a09d;
+}	
+textarea {
+	height: 100px;
+}
+input, textarea {
+	margin-bottom: 10px;
+	font-size: 11pt;
+	padding: 15px 10px 10px;
+	border: 1px solid #cecece;
+	background-color: #efefef;
+	color: #787575;
+	border-radius: 5px;
+	width: 70%;
+	outline: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+#header {
+	background: #190707;
+	color: white;
+	height: 90px;
+}	
+	#header a {
+		color: white;
+	}
+ 
+#logo {
+	float: left;
+	padding: 15px;
+}
+	
+	#logo .hospital {
+		display: block;
+		font-family: Freestyle Script;
+		font-weight: 100;
+		font-size: 40px;
+	}
+	
+	#logo .slogan {
+		display: block;
+		font-family: Agency FB;
+		font-weight: 300;
+		font-size: 15px;
+		color: #999;
+	}
+	
+nav {
+	float: right;
+}
+	nav ul {
+		margin: 0;
+		padding: 0;
+		padding-right: 20px;
+	}
+	
+		nav ul li {
+			display: inline-block;
+			line-height: 80px;
+		}
+			
+			nav ul li a {
+				display: block;
+				padding: 0 10px;
+				text-decoration: none;
+			}
+			
+				nav ul li a:hover {
+					background: #0b76a6;
+				}
+#main-content {
+	background: white;
+	width: 90%;
+	max-width: 800px;
+	margin: 20px auto;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+	background-color: #E6E6E6;
+	padding: 15px;
+	border-radius: 10px;
+}
+ 
+#main-footer {
+	background: #190707;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 40px;
+}
+	#main-footer p {
+		margin: 0;
+	}
+	
+	#main-footer a {
+		color: white;
+	}
+#header {
+	background: #190707;
+	color: white;
+	height: 90px;
+	width: 100%;
+	left: 0;
+	top: 0;
+	position: fixed;
+}

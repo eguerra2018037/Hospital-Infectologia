@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#limpiarControles" prefHeight="439.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.erickguerra.controller.HorarioController">
+   <children>
+      <Label layoutX="158.0" text="Horarios" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Agency FB" size="53.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNombreArea" layoutX="55.0" layoutY="82.0" text="Horario Inicio" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="81.0" />
+      <TextField fx:id="txtHoraInicio" editable="false" layoutX="129.0" layoutY="77.0" prefHeight="25.0" prefWidth="89.0" AnchorPane.rightAnchor="244.0" />
+      <TextField fx:id="txtHoraSalida" editable="false" layoutX="337.0" layoutY="77.0" prefHeight="25.0" prefWidth="89.0" />
+      <CheckBox fx:id="cbLunes" disable="true" layoutX="37.0" layoutY="122.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Lunes" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="127.0" />
+      <CheckBox fx:id="cbMartes" disable="true" layoutX="109.0" layoutY="127.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Martes" AnchorPane.topAnchor="127.0" />
+      <CheckBox fx:id="cbMiercoles" disable="true" layoutX="192.0" layoutY="124.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Miércoles" AnchorPane.topAnchor="127.0" />
+      <CheckBox fx:id="cbJueves" disable="true" layoutX="286.0" layoutY="127.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Jueves" AnchorPane.topAnchor="127.0" />
+      <CheckBox fx:id="cbViernes" disable="true" layoutX="356.0" layoutY="116.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Viernes" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="127.0" />
+      <TableView fx:id="tblHorarios" layoutX="20.0" layoutY="158.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="221.0" prefWidth="442.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="158.0">
+         <columns>
+            <TableColumn fx:id="colCodigoHorario" prefWidth="94.0" text="codigoHorario" />
+            <TableColumn fx:id="colHorarioInicio" prefWidth="74.0" text="Hora Inicio" />
+            <TableColumn fx:id="colHorarioSalida" prefWidth="86.0" text="Hora Salida" />
+            <TableColumn fx:id="colLunes" prefWidth="35.0" text="L" />
+            <TableColumn fx:id="colMartes" prefWidth="37.0" text="Ma" />
+            <TableColumn fx:id="colMiercoles" prefWidth="38.0" text="Mi" />
+            <TableColumn fx:id="colJueves" prefWidth="37.0" text="J" />
+            <TableColumn fx:id="colViernes" prefWidth="40.0" text="V" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="173.0" layoutY="242.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="36.0" prefWidth="59.0" text="Nuevo" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="230.0" />
+      <Button fx:id="btnEditar" layoutX="302.0" layoutY="242.0" mnemonicParsing="false" onAction="#editar" prefHeight="36.0" prefWidth="70.0" text="Editar" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="90.0" />
+      <Button fx:id="btnEliminar" layoutX="232.0" layoutY="242.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="70.0" text="Eliminar" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="160.0" />
+      <Button fx:id="btnReporte" layoutX="360.0" layoutY="245.0" mnemonicParsing="false" onAction="#reporte" prefHeight="36.0" prefWidth="70.0" text="Reporte" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="20.0" />
+      <Label fx:id="lblNombreArea1" layoutX="241.0" layoutY="82.0" text="Horario Salida" />
+      <ImageView fitHeight="47.0" fitWidth="51.0" layoutX="100.0" layoutY="8.0" onMouseClicked="#ventanaMedicos" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Regreso.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="78.0" fitWidth="75.0" layoutX="321.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Horario.png" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <InnerShadow color="#682c2c" height="30.64" radius="14.6325" width="29.89" />
+   </effect>
+</AnchorPane>

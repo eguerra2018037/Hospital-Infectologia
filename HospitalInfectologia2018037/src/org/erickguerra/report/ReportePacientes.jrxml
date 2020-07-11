@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePacientes" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="35e7926a-da56-41c6-b08e-9d1da06bc25c">
+	<property name="ireport.zoom" value="1.1269722013523664"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="282"/>
+	<queryString>
+		<![CDATA[select *from pacientes P  left join contactoUrgencia C on P.codigoPaciente = C.codigoPaciente]]>
+	</queryString>
+	<field name="codigoPaciente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DPI" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaNacimiento" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="edad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ocupacion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoContactoUrgencia" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numeroContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="137" splitType="Stretch">
+			<staticText>
+				<reportElement x="261" y="100" width="206" height="20" uuid="be8cf41a-8dd4-4df7-a6ca-a9c63d2d22ac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tu salud es lo primero]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="197" y="21" width="335" height="79" forecolor="#000000" uuid="a25780c1-9635-40ad-92f4-fff25ea1e334"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Freestyle Script" size="58"/>
+				</textElement>
+				<text><![CDATA[Hospital "Buena Fe"]]></text>
+			</staticText>
+			<image>
+				<reportElement x="23" y="8" width="119" height="122" uuid="bd1f35b5-6e49-4566-bac8-30c15f169725"/>
+				<imageExpression><![CDATA["C:\\Users\\erick\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Hospital Buena fe (4).png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="88" y="0" width="62" height="20" backcolor="#999999" uuid="31813366-eaac-4f51-94fd-5700790ec375"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DPI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="150" y="0" width="88" height="20" backcolor="#999999" uuid="92f47297-8c82-4381-92bc-dfcff10e669b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="332" y="0" width="37" height="20" backcolor="#999999" uuid="57196a93-579e-41fd-8b81-c693bbf371db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Edad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="369" y="0" width="116" height="20" backcolor="#999999" uuid="95b76873-ab33-4ac7-a1b0-09ae07f462c4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="24" width="555" height="1" forecolor="#660000" uuid="9f58a17c-e199-4bf8-9815-fc7dafadbab0"/>
+			</line>
+			<line>
+				<reportElement x="0" y="28" width="555" height="1" forecolor="#000000" uuid="3cf0a732-f94d-442d-998e-fea39849b872"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="88" height="20" backcolor="#999999" uuid="adcd5ee9-699c-4141-b9da-c0eb5fb4fb9a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Paciente	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="238" y="0" width="94" height="20" backcolor="#999999" uuid="be8b908c-c58f-4d34-9102-bc34bced89ef"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="485" y="0" width="70" height="20" backcolor="#999999" uuid="a9570d1d-a28c-48f7-914f-6a919e87048a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="88" height="38" uuid="e7865c17-a1fb-460b-a6db-ff8206118da3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoPaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="0" width="62" height="38" uuid="21ad6f52-42d0-4a44-a528-c7db889e5fd9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DPI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="88" height="38" uuid="87cbd997-ac1d-47c8-9211-341c0307c381"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="332" y="0" width="37" height="38" uuid="fe856f77-f053-433c-87c2-1e671fa21ad4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{edad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="369" y="0" width="116" height="38" uuid="b7d1405a-e668-441d-bb8e-faabeaff0657"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="37" width="555" height="1" forecolor="#660000" uuid="6ccc54f8-3a7d-48e4-86ac-9bc766b3fb9a"/>
+			</line>
+			<textField>
+				<reportElement x="238" y="0" width="94" height="38" uuid="c0d06cee-755a-4531-b1ef-406f3c5b42f4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="0" width="70" height="38" uuid="d52b3ea5-5357-413e-ad67-2409edc0b521"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{numeroContacto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="182" splitType="Stretch">
+			<staticText>
+				<reportElement x="149" y="103" width="78" height="37" uuid="a9eebe44-00ed-4f55-9be9-84eeb8cd5bbe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[18 Av. 27-12 Zona 6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="103" width="59" height="37" uuid="768a95cf-fba0-4dec-895b-41e04360b2f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[5698-2516 6630-5504]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="103" width="76" height="37" uuid="9a9a8bc0-b31a-4e08-92b1-c54d590df6a9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[hospitalbuenafe@gmail.com]]></text>
+			</staticText>
+			<image>
+				<reportElement x="341" y="62" width="50" height="31" uuid="09e8cbea-b67d-49b9-82aa-f1f1ba7ca4ab"/>
+				<imageExpression><![CDATA["C:\\Users\\erick\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Correo.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="140" width="555" height="36" uuid="d21bc462-b92f-48b6-a558-64e6a9b47863"/>
+				<imageExpression><![CDATA["C:\\Users\\erick\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Pie de pagina.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="169" y="55" width="37" height="38" uuid="73584260-3ac0-475c-997a-c52e0fd16d49"/>
+				<imageExpression><![CDATA["C:\\Users\\erick\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Ubicacion.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="255" y="55" width="41" height="38" uuid="157b8373-b266-488a-83cf-0d091fae9f58"/>
+				<imageExpression><![CDATA["C:\\Users\\erick\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Telefono.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteMedicos" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8884cf5b-d4ac-4199-94f0-fa393acd59fa">
+	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="222"/>
+	<queryString>
+		<![CDATA[call sp_ListarMedicos]]>
+	</queryString>
+	<field name="codigoMedico" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="licenciaMedica" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaEntrada" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaSalida" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="turnoMaximo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="133" splitType="Stretch">
+			<staticText>
+				<reportElement x="271" y="102" width="206" height="20" uuid="d0a6c473-0418-4ca9-977c-c79a494336b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tu salud es lo primero]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="23" width="335" height="79" forecolor="#000000" uuid="130aed90-865c-4d0c-80fe-e3fa2cae1844"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Freestyle Script" size="58"/>
+				</textElement>
+				<text><![CDATA[Hospital "Buena Fe"]]></text>
+			</staticText>
+			<image>
+				<reportElement x="31" y="5" width="119" height="122" uuid="2873da10-2736-4c8e-be5f-f436766b059d"/>
+				<imageExpression><![CDATA["C:\\Users\\erick\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Hospital Buena fe (4).png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="25" width="555" height="1" forecolor="#660000" uuid="680785cd-a587-45b6-b5ce-a50ec01e39c3"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="82" y="0" width="89" height="20" backcolor="#999999" uuid="2d11814d-35fa-4347-873c-b09a097a4ae1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Licencia Médica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="260" y="0" width="88" height="20" backcolor="#999999" uuid="98609208-4bf7-4dec-b046-327620cd5185"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="348" y="0" width="69" height="20" backcolor="#999999" uuid="c5e2e0f6-060d-449a-84a3-dc42bd01fb69"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Entrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="171" y="0" width="89" height="20" backcolor="#999999" uuid="ae582fdc-7eb7-446f-8b3e-38641469bcac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="417" y="0" width="65" height="20" backcolor="#999999" uuid="0af9cea2-2e42-4bcf-b011-c64b88661ca7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Salida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="482" y="0" width="73" height="20" backcolor="#999999" uuid="0ad58a8a-ce38-4d3d-b351-ea869781edc3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Turno Máximo]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="28" width="555" height="1" forecolor="#000000" uuid="2c231307-5eb3-4767-bcce-950a839e7035"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="0" width="82" height="20" backcolor="#999999" uuid="5dac860f-1a9c-463b-b46a-e3c1beadf406"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Código Médico]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="21" width="82" height="20" uuid="95ef84eb-7ad9-446d-9fe7-290ae37258ae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoMedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="21" width="89" height="20" uuid="398e09c2-a922-4f46-9005-ee42ccf167b7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{licenciaMedica}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="2" y="40" width="553" height="1" forecolor="#660000" uuid="6f935b88-39df-4d6d-9c43-d9e196636507"/>
+			</line>
+			<textField>
+				<reportElement x="171" y="21" width="89" height="20" uuid="12dc427b-b79b-479e-bbfb-d26358f9c588"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="21" width="88" height="20" uuid="a1739cd5-7de1-4aa5-ba3c-96e9ef3ba2b8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="21" width="69" height="20" uuid="1ae4e1c1-088a-49ab-adca-1c8c5bae7add"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{horaEntrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="21" width="65" height="20" uuid="c7da604c-eb9d-4552-8ed4-2ec93d87b71f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{horaSalida}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="482" y="20" width="73" height="20" uuid="0ae61089-a5de-445b-bffb-6a1455b3fec4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{turnoMaximo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="145" splitType="Stretch">
+			<staticText>
+				<reportElement x="248" y="58" width="59" height="48" uuid="933c73b3-4da9-4cc2-a238-92297951a826"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[5698-2516 6630-5504]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="58" width="76" height="48" uuid="0839788f-cc56-42ef-ac5f-5480c43dbd3b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[hospitalbuenafe@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="58" width="78" height="48" uuid="3c4e8112-73a4-44d0-aa8d-371e4ddbad48"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[18 Av. 27-12 Zona 6]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="108" width="555" height="36" uuid="28ca6087-6593-463a-9e03-2c2980a4717b"/>
+				<imageExpression><![CDATA["C:\\Users\\erick\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Pie de pagina.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="170" y="20" width="37" height="38" uuid="fc7d6bf7-6c95-49f5-a27e-aba77b77f400"/>
+				<imageExpression><![CDATA["C:\\Users\\erick\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Ubicacion.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="256" y="20" width="41" height="38" uuid="fb379496-ac5d-4664-ae60-3b6c0153de8c"/>
+				<imageExpression><![CDATA["C:\\Users\\erick\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Telefono.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="337" y="27" width="65" height="31" uuid="8bb9c8fa-6ce0-435d-8c62-cf18e8c4ddfa"/>
+				<imageExpression><![CDATA["C:\\Users\\erick\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Correo.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

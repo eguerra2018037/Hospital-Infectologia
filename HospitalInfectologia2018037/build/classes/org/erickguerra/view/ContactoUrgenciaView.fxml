@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#limpiarControles" prefHeight="466.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.erickguerra.controller.ContactoUrgenciaController">
+   <children>
+      <ImageView fitHeight="93.0" fitWidth="92.0" layoutX="486.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ContactoUrgencia.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="185.0" layoutY="8.0" text="Contacto Urgencia" AnchorPane.topAnchor="8.0">
+         <font>
+            <Font name="Agency FB" size="53.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="100.0" text="Nombres" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="81.0" />
+      <Label layoutX="60.0" layoutY="151.0" text="Número de Contacto" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="173.0" />
+      <Label layoutX="60.0" layoutY="119.0" text="Apellidos" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="127.0" />
+      <Label layoutX="373.0" layoutY="173.0" text="Código de Paciente" />
+      <TextField fx:id="txtNombres" editable="false" layoutX="106.0" layoutY="77.0" prefHeight="25.0" prefWidth="459.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="37.0" />
+      <TextField fx:id="txtApellidos" editable="false" layoutX="106.0" layoutY="123.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="37.0" />
+      <TextField fx:id="txtNumeroContacto" editable="false" layoutX="160.0" layoutY="169.0" prefHeight="25.0" prefWidth="194.0" />
+      <ComboBox fx:id="cmbCodigoPaciente" disable="true" layoutX="492.0" layoutY="169.0" prefWidth="150.0" AnchorPane.rightAnchor="37.0" />
+      <TableView fx:id="tblContactoUrgencia" layoutX="125.0" layoutY="219.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="213.0">
+        <columns>
+            <TableColumn fx:id="colCodigoContacto" prefWidth="155.0" text="Código Contacto Urgencia" />
+          <TableColumn fx:id="colNombres" prefWidth="136.0" text="Nombres" />
+          <TableColumn fx:id="colApellidos" prefWidth="130.0" text="Apellidos" />
+            <TableColumn fx:id="colNumeroContacto" prefWidth="124.0" text="Número de Contacto" />
+            <TableColumn fx:id="colCodigoPaciente" prefWidth="113.0" text="Código de Paciente" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="390.0" layoutY="415.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="36.0" prefWidth="59.0" text="Nuevo" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="230.0" />
+      <Button fx:id="btnEditar" layoutX="519.0" layoutY="415.0" mnemonicParsing="false" onAction="#editar" prefHeight="36.0" prefWidth="70.0" text="Editar" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="90.0" />
+      <Button fx:id="btnEliminar" layoutX="449.0" layoutY="415.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="70.0" text="Eliminar" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="160.0" />
+      <Button fx:id="btnReporte" layoutX="579.0" layoutY="415.0" mnemonicParsing="false" onAction="#reporte" prefHeight="36.0" prefWidth="70.0" text="Reporte" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="20.0" />
+      <ImageView fitHeight="48.0" fitWidth="45.0" layoutX="127.0" layoutY="17.0" onMouseClicked="#ventanaPacientes" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Regreso.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+   <effect>
+      <InnerShadow color="#682c2c" height="30.27" radius="14.54" width="29.89" />
+   </effect>
+</AnchorPane>

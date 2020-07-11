@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#limpiarControles" prefHeight="443.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.erickguerra.controller.TurnoController">
+   <children>
+      <GridPane fx:id="grpTurno" layoutX="78.0" layoutY="77.0" prefHeight="25.0" prefWidth="139.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane fx:id="grpCita" layoutX="305.0" layoutY="77.0" prefHeight="25.0" prefWidth="139.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <ComboBox fx:id="cmbCodigoPaciente" disable="true" layoutX="574.0" layoutY="77.0" prefHeight="25.0" prefWidth="129.0" AnchorPane.topAnchor="77.0" />
+      <TextField fx:id="txtValorCita" editable="false" layoutX="114.0" layoutY="123.0" prefHeight="25.0" prefWidth="79.0" />
+      <ComboBox fx:id="cmbCodigoMedicoEspecialidad" disable="true" layoutX="323.0" layoutY="123.0" prefHeight="25.0" prefWidth="129.0" />
+      <ComboBox fx:id="cmbCodigoResponsableTurno" disable="true" layoutX="574.0" layoutY="123.0" prefHeight="25.0" prefWidth="129.0" AnchorPane.leftAnchor="574.0" AnchorPane.topAnchor="123.0" />
+      <TableView fx:id="tblTurnos" layoutX="12.0" layoutY="343.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="778.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="167.0">
+         <columns>
+            <TableColumn fx:id="colCodigoTurno" prefWidth="85.0" text="Codigo Turno" />
+            <TableColumn fx:id="colTurno" prefWidth="62.0" text="Turno" />
+            <TableColumn fx:id="colCita" prefWidth="59.0" text="Cita" />
+            <TableColumn fx:id="colValorCita" prefWidth="94.0" text="Valor de Cita" />
+            <TableColumn fx:id="colCodigoMedicoEspecialidad" prefWidth="165.0" text="Codigo Especialidad-Médico" />
+            <TableColumn fx:id="colCodigoResponsableTurno" prefWidth="162.0" text="Codigo Responsable Turno" />
+            <TableColumn fx:id="colCodigoPaciente" prefWidth="100.0" text="Codigo Paciente" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="651.0" layoutY="475.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="36.0" prefWidth="59.0" text="Nuevo" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="230.0" />
+      <Button fx:id="btnEliminar" layoutX="710.0" layoutY="475.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="70.0" text="Eliminar" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="160.0" />
+      <Button fx:id="btnEditar" layoutX="459.0" layoutY="475.0" mnemonicParsing="false" onAction="#editar" prefHeight="36.0" prefWidth="70.0" text="Editar" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="90.0" />
+      <Button fx:id="btnReporte" layoutX="593.0" layoutY="527.0" mnemonicParsing="false" onAction="#reporte" prefHeight="36.0" prefWidth="70.0" text="Reporte" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="261.0" layoutY="81.0" text="Cita" />
+      <Label layoutX="317.0" layoutY="7.0" text="Turnos" AnchorPane.topAnchor="7.0">
+         <font>
+            <Font name="Agency FB" size="53.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="91.0" text="Turno" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="81.0" />
+      <Label layoutX="309.0" layoutY="91.0" text="Valor de Cita" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="127.0" />
+      <ImageView fitHeight="120.0" fitWidth="135.0" layoutX="420.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/d5vvj7d-b0862043-416d-475d-a9ed-a946a0e1954d.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="55.0" fitWidth="53.0" layoutX="255.0" layoutY="12.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Regreso.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="207.0" layoutY="127.0" text="Médico Especialidad" />
+      <Label layoutX="465.0" layoutY="127.0" text="Responsable Turno" />
+      <Label layoutX="518.0" layoutY="81.0" text="Paciente" />
+   </children>
+   <effect>
+      <InnerShadow color="#682c2c" height="31.38" radius="14.817499999999999" width="29.89" />
+   </effect>
+</AnchorPane>

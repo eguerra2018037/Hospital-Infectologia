@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#limpiarControles" prefHeight="466.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.erickguerra.controller.MedicoEspecialidadController">
+   <children>
+      <Label layoutX="121.0" layoutY="14.0" text="Médicos, Especialidades" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Agency FB" size="53.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblMedicoEspecialidad" layoutX="12.0" layoutY="343.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="778.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="167.0">
+         <columns>
+            <TableColumn fx:id="colCodigoMedicoEspecialidad" prefWidth="170.0" text="Codigo Especialidad-Medico" />
+            <TableColumn fx:id="colCodigoMedico" prefWidth="132.0" text="Código Médico" />
+            <TableColumn fx:id="colCodigoEspecialidad" prefWidth="162.0" text="Código Especialidad" />
+            <TableColumn fx:id="colCodigoHorario" prefWidth="155.0" text="Código Horario" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="120.0" fitWidth="135.0" layoutX="515.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/d5vvj7d-b0862043-416d-475d-a9ed-a946a0e1954d.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnNuevo" layoutX="491.0" layoutY="352.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="36.0" prefWidth="59.0" text="Nuevo" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="90.0" />
+      <Button fx:id="btnEliminar" layoutX="710.0" layoutY="475.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="70.0" text="Eliminar" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="20.0" />
+      <GridPane fx:id="grpFecha" layoutX="152.0" layoutY="167.0" prefHeight="25.0" prefWidth="188.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <ComboBox fx:id="cmbCodigoMedico" disable="true" layoutX="129.0" layoutY="77.0" prefWidth="150.0" AnchorPane.leftAnchor="129.0" AnchorPane.topAnchor="77.0" />
+      <ComboBox fx:id="cmbCodigoEspecialidad" disable="true" layoutX="306.0" layoutY="123.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbCodigoHorario" disable="true" layoutX="400.0" layoutY="77.0" prefWidth="150.0" />
+      <ImageView fitHeight="55.0" fitWidth="53.0" layoutX="50.0" layoutY="19.0" onMouseClicked="#ventanaMedicos" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Regreso.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="63.0" layoutY="83.0" text="Código Médico" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="81.0" />
+      <Label layoutX="299.0" layoutY="81.0" text="Código Horario" />
+      <Label layoutX="189.0" layoutY="124.0" text="Código Especialidad" AnchorPane.topAnchor="127.0" />
+   </children>
+   <effect>
+      <InnerShadow color="#682c2c" height="31.38" radius="14.817499999999999" width="29.89" />
+   </effect>
+</AnchorPane>

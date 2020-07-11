@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#limpiarControles" prefHeight="526.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.erickguerra.controller.PacienteController">
+   <children>
+      <Label layoutX="390.0" layoutY="14.0" text="Pacientes" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Agency FB" size="53.0" />
+         </font>
+      </Label>
+      <Label layoutX="483.0" layoutY="219.0" text="Sexo" AnchorPane.leftAnchor="483.0" AnchorPane.topAnchor="219.0" />
+      <Label layoutX="252.0" layoutY="219.0" text="Ocupación" AnchorPane.leftAnchor="252.0" AnchorPane.topAnchor="219.0" />
+      <Label layoutX="602.0" layoutY="173.0" text="Dirección" AnchorPane.leftAnchor="602.0" AnchorPane.topAnchor="173.0" />
+      <Label layoutX="398.0" layoutY="173.0" text="Edad" />
+      <Label layoutX="37.0" layoutY="183.0" text="Fecha de Nacimiento" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="173.0" />
+      <Label layoutX="34.0" layoutY="91.0" text="DPI" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="81.0" />
+      <Label layoutX="37.0" layoutY="121.0" text="Apellidos" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="127.0" />
+      <Label layoutX="471.0" layoutY="127.0" text="Nombres" AnchorPane.leftAnchor="471.0" AnchorPane.topAnchor="127.0" />
+      <TextField fx:id="txtDPI" editable="false" layoutX="103.0" layoutY="77.0" />
+      <TextField fx:id="txtApellidos" editable="false" layoutX="103.0" layoutY="123.0" prefHeight="25.0" prefWidth="344.0" />
+      <TextField fx:id="txtNombres" editable="false" layoutX="491.0" layoutY="123.0" prefHeight="25.0" prefWidth="371.0" AnchorPane.rightAnchor="37.0" />
+      <GridPane fx:id="grpFecha" layoutX="152.0" layoutY="167.0" prefHeight="25.0" prefWidth="188.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <TextField fx:id="txtEdad" editable="false" layoutX="432.0" layoutY="169.0" />
+      <TextField fx:id="txtDireccion" editable="false" layoutX="614.0" layoutY="169.0" prefHeight="25.0" prefWidth="243.0" AnchorPane.rightAnchor="37.0" />
+      <TextField fx:id="txtOcupacion" editable="false" layoutX="315.0" layoutY="215.0" />
+      <ComboBox fx:id="cmbSexo" disable="true" layoutX="520.0" layoutY="215.0" prefWidth="150.0" />
+      <TableView fx:id="tblPacientes" layoutX="12.0" layoutY="343.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="778.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="259.0">
+        <columns>
+            <TableColumn fx:id="colCodigoPaciente" prefWidth="104.0" text="Codigo Paciente" />
+          <TableColumn fx:id="colDPI" prefWidth="81.0" text="DPI" />
+          <TableColumn fx:id="colApellidos" prefWidth="107.0" text="Apellidos" />
+            <TableColumn fx:id="colNombres" prefWidth="126.0" text="Nombres" />
+            <TableColumn fx:id="colFechaNacimiento" prefWidth="132.0" text="Fecha de Nacimiento" />
+            <TableColumn fx:id="colEdad" prefWidth="36.0" text="Edad" />
+            <TableColumn fx:id="colDireccion" prefWidth="141.0" text="Dirección" />
+            <TableColumn fx:id="colOcupacion" prefWidth="111.0" text="Ocupación" />
+            <TableColumn fx:id="colSexo" prefWidth="81.0" text="Sexo" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="120.0" fitWidth="135.0" layoutX="580.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Pacientes.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnNuevo" layoutX="651.0" layoutY="475.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="36.0" prefWidth="59.0" text="Nuevo" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="230.0" />
+      <Button fx:id="btnEliminar" layoutX="710.0" layoutY="475.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="70.0" text="Eliminar" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="160.0" />
+      <Button fx:id="btnEditar" layoutX="780.0" layoutY="475.0" mnemonicParsing="false" onAction="#editar" prefHeight="36.0" prefWidth="70.0" text="Editar" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="90.0" />
+      <Button fx:id="btnReporte" layoutX="593.0" layoutY="527.0" mnemonicParsing="false" onAction="#reporte" prefHeight="36.0" prefWidth="70.0" text="Reporte" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="20.0" />
+      <Button layoutX="776.0" layoutY="11.0" mnemonicParsing="false" onAction="#ventanaContactoUrgencia" prefHeight="99.0" prefWidth="149.0" text="Contacto Urgencia" />
+      <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="316.0" layoutY="21.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Regreso.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+   <effect>
+      <InnerShadow color="#682c2c" height="31.38" radius="14.817499999999999" width="29.89" />
+   </effect>
+</AnchorPane>

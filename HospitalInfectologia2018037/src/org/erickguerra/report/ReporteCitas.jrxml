@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteCitas" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="da7da09d-c764-4317-b073-32f57f7e260d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="55"/>
+	<parameter name="codigoPaciente" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select p.nombres as nombrePaciente, p.apellidos as apellidospaciente, m.nombres, m.apellidos from medicos m inner join controlcitas c on c.codigomedico=m.codigomedico inner join pacientes p on p.codigopaciente=c.codigopaciente; ]]>
+	</queryString>
+	<field name="nombrePaciente" class="java.lang.String"/>
+	<field name="apellidospaciente" class="java.lang.String"/>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="156" splitType="Stretch">
+			<image>
+				<reportElement x="22" y="10" width="117" height="117" uuid="faf8eda5-af5e-4919-8c63-3698350548cc"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Hospital Buena fe (4).png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="165" y="10" width="370" height="83" uuid="2f1821fd-8bc2-4e0b-b89f-b9e027d7849d"/>
+				<textElement>
+					<font fontName="Freestyle Script" size="68"/>
+				</textElement>
+				<text><![CDATA[Hospital "Buena Fe"]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="93" width="158" height="34" uuid="4c65899f-2f27-4001-bc76-32b00e0ea0a7"/>
+				<textElement>
+					<font fontName="Agency FB" size="20"/>
+				</textElement>
+				<text><![CDATA[Tu salud es lo primero]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="65" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="16" y="2" width="100" height="20" uuid="d28ff28e-6d4e-4384-9fee-e7388da3ae37"/>
+				<text><![CDATA[nombrePaciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="2" width="100" height="20" uuid="2dc39c98-8e28-47db-abbe-497da2204db8"/>
+				<text><![CDATA[apellidospaciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="299" y="2" width="100" height="20" uuid="900fbb71-14de-4cd5-8f08-b9d1a403a218"/>
+				<text><![CDATA[nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="457" y="2" width="100" height="20" uuid="c41da340-4e74-4a37-be55-ef3d8ce3f513"/>
+				<text><![CDATA[apellidos]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="16" y="25" width="100" height="20" uuid="abd39a6a-2f74-4f50-89d2-923ce5146184"/>
+				<textFieldExpression><![CDATA[$F{nombrePaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="38" width="100" height="20" uuid="1f62bfb8-9d79-469b-aff4-18748db398d1"/>
+				<textFieldExpression><![CDATA[$F{apellidospaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="299" y="36" width="100" height="20" uuid="3fd1ea8e-9fd2-4a29-a085-b0c04d5ab5b0"/>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="457" y="42" width="100" height="20" uuid="7e77e81f-e509-4853-9016-778494b1225d"/>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="229" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="193" width="555" height="36" uuid="f2529085-ea27-4215-8a9b-8a187091e386"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Pie de pagina.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="349" y="77" width="55" height="31" uuid="56aa1cfb-42f8-4280-8ab9-f4c5391bb4f5"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Correo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="338" y="124" width="76" height="48" uuid="2870cdc9-f60f-41a0-8c65-71b2a01019f8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[hospitalbuenafe@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="124" width="59" height="48" uuid="31b14478-bbff-4be9-83dd-ed3ea3febc92"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[5698-2516 6630-5504]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="124" width="87" height="48" uuid="be7c6511-1543-4cf6-94d0-d17a5344426b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[18 av. 5-01 Linda Vista Villa NUeva]]></text>
+			</staticText>
+			<image>
+				<reportElement x="266" y="70" width="41" height="38" uuid="8d1c08ed-2b7e-4608-8f7d-5d6c8f388648"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Telefono.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="148" y="77" width="37" height="38" uuid="51390638-9a2f-49c2-8dd2-57c101a85768"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Ubicacion.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

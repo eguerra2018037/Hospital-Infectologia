@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteControlCitas" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8b243fcc-e800-4976-a77d-8ca586a61724">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="323"/>
+	<parameter name="codigoPaciente" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ReporteCitas($P{codigoPaciente});]]>
+	</queryString>
+	<field name="codigoControlCita" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaInicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaFin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPaciente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DPI" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NombrePaciente" class="java.lang.String"/>
+	<field name="ApellidosPaciente" class="java.lang.String"/>
+	<field name="edad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="licenciaMedica" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NombreMedico" class="java.lang.String"/>
+	<field name="ApellidoMedico" class="java.lang.String"/>
+	<field name="descripcionReceta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="NombrePaciente_1" class="java.lang.Integer" resetType="Column" calculation="DistinctCount">
+		<variableExpression><![CDATA[$F{NombrePaciente}]]></variableExpression>
+	</variable>
+	<variable name="ApellidosPaciente_1" class="java.lang.Integer" resetType="Column" calculation="DistinctCount">
+		<variableExpression><![CDATA[$F{ApellidosPaciente}]]></variableExpression>
+	</variable>
+	<variable name="NombrePaciente_2" class="java.lang.Integer" resetType="Column" calculation="DistinctCount">
+		<variableExpression><![CDATA[$F{NombrePaciente}]]></variableExpression>
+	</variable>
+	<variable name="NombrePaciente_3" class="java.lang.Integer" resetType="Column" calculation="DistinctCount">
+		<variableExpression><![CDATA[$F{NombrePaciente}]]></variableExpression>
+	</variable>
+	<variable name="NombrePaciente_4" class="java.lang.Integer" resetType="Column" calculation="DistinctCount">
+		<variableExpression><![CDATA[$F{NombrePaciente}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<image>
+				<reportElement x="12" y="10" width="117" height="117" uuid="1e8f33a4-749d-4b4a-8a57-cfc471f88f76"/>
+				<imageExpression><![CDATA["C:\\Users\\erick\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Hospital Buena fe (4).png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="164" y="10" width="370" height="83" uuid="09950812-a83d-4e0d-98d5-81763a662dbc"/>
+				<textElement>
+					<font fontName="Freestyle Script" size="68"/>
+				</textElement>
+				<text><![CDATA[Hospital "Buena Fe"]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="93" width="158" height="34" uuid="923e03ce-d56b-4715-a7f7-8ec9c5cb238c"/>
+				<textElement>
+					<font fontName="Agency FB" size="20"/>
+				</textElement>
+				<text><![CDATA[Tu salud es lo primero]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="154" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="386" y="18" width="107" height="30" forecolor="#000000" backcolor="#FFFFFF" uuid="f52caf47-e5e2-4181-bad3-6343aeca0eae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Agency FB" size="18" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Código Paciente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="493" y="5" width="55" height="48" uuid="030c2330-a165-4f57-a1c8-3cb1c4a24b0b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Sitka Small" size="36" isBold="false" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoPaciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="57" width="555" height="33" forecolor="#FFFFFF" backcolor="#000000" uuid="ff36ae6c-cd1b-4f09-9736-17880dbdc959"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Agency FB" size="26"/>
+				</textElement>
+				<text><![CDATA[PACIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="90" width="115" height="20" forecolor="#000000" backcolor="#999999" uuid="ddd8d781-9e71-43a5-b054-beca96bbfa84"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DPI]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="1" y="127" width="115" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="35e0fb14-f322-4aba-be1e-2a6eee420fce"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DPI}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="116" y="90" width="123" height="20" forecolor="#000000" backcolor="#999999" uuid="8d2ed09a-35f9-4780-9ec7-e4ac0516a890"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombres]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="116" y="127" width="123" height="20" uuid="41cd8a57-e590-4923-9c0c-bea4a60f6a7b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NombrePaciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="239" y="90" width="126" height="20" forecolor="#000000" backcolor="#999999" uuid="a0c201d7-560f-427c-8530-afa2f5e62bfd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="239" y="127" width="126" height="20" uuid="93477738-d4f8-4f1f-8c5b-b5b3a3cdb071"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ApellidosPaciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="365" y="90" width="36" height="20" forecolor="#000000" backcolor="#999999" uuid="d589cb33-ad0b-40e5-a781-450652efa6fc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Edad]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="365" y="127" width="36" height="20" uuid="dc112f38-ee54-434e-b369-8b053154834f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{edad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="401" y="90" width="154" height="20" forecolor="#000000" backcolor="#999999" uuid="e445e310-e41c-4a46-81e6-822458232eb0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="401" y="127" width="154" height="20" uuid="e0f59f6c-ed21-4077-b14d-307935d800b8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="113" width="555" height="1" forecolor="#990033" uuid="d887220a-9880-4f8d-8997-8f456ace2a9e"/>
+			</line>
+			<line>
+				<reportElement x="0" y="116" width="555" height="1" forecolor="#990033" uuid="85daaa84-902a-4eed-a87a-eca70a8ba7d8"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="4" width="555" height="33" forecolor="#FFFFFF" backcolor="#000000" uuid="3db62cc6-8c32-4902-8af9-a54ef54fc501"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Agency FB" size="26"/>
+				</textElement>
+				<text><![CDATA[Cita(s)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="130" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="29" width="555" height="1" forecolor="#990033" uuid="ee47f811-6b59-4809-bdc9-f76aac249512"/>
+			</line>
+			<line>
+				<reportElement x="0" y="33" width="555" height="1" forecolor="#990033" uuid="771e08f3-b8a7-4713-a66b-0fbaf276c2ca"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="5" width="79" height="20" forecolor="#000000" backcolor="#999999" uuid="1043afd8-204b-414f-8b09-5b247d3fa742"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Código Cita]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1" y="35" width="78" height="20" uuid="feac4595-8642-4015-8bde-6d870fc743de"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoControlCita}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="80" y="5" width="96" height="20" forecolor="#000000" backcolor="#999999" uuid="798e8d54-7a1a-462f-934d-ece0c0a944a4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Hora de Inicio]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="79" y="35" width="97" height="20" uuid="ac29035f-02f1-43d7-b0d2-3ed4139169b4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaInicio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="176" y="5" width="89" height="20" forecolor="#000000" backcolor="#999999" uuid="75180c5f-1d4a-4f1d-abcf-869dd48bd535"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Hora de Fin]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="176" y="34" width="89" height="20" uuid="7d9c1f24-621c-4c09-b7bd-96901087a828"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaFin}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="265" y="5" width="290" height="20" forecolor="#000000" backcolor="#999999" uuid="263e6e1f-27f9-4c90-ba56-cba5f8af2da5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Médico Encargado]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="265" y="35" width="99" height="20" uuid="1bf12cad-3afd-462e-975f-89bf8ffadf97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NombreMedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="365" y="35" width="96" height="20" uuid="629aa39e-17a6-4b15-9893-419c81c87d4d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ApellidoMedico}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="461" y="35" width="93" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="1cb2e2c2-794c-4d98-b441-59c01ad4e257"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{licenciaMedica}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="136" y="86" width="129" height="25" forecolor="#000000" backcolor="#FFFFFF" uuid="dc9f5f77-6e86-47ee-897c-cc4c71718cfb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Agency FB" size="18" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Receta Indicada:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="265" y="86" width="136" height="25" forecolor="#000000" backcolor="#FFFFFF" uuid="4211606b-b7a1-4937-8c34-b390a0d148f5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcionReceta}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="158" splitType="Stretch">
+			<image>
+				<reportElement x="151" y="13" width="37" height="38" uuid="fb8c8573-856f-467d-98db-d7a2ae8bd22b"/>
+				<imageExpression><![CDATA["C:\\Users\\erick\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Ubicacion.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="126" y="60" width="87" height="48" uuid="5816c997-e8de-4ddb-8cb9-13f9ce4e1f8d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[18 av. 5-01 Linda Vista Villa NUeva]]></text>
+			</staticText>
+			<image>
+				<reportElement x="257" y="13" width="41" height="38" uuid="ee84f856-7f45-4585-a4fb-d2c3dbe1a35f"/>
+				<imageExpression><![CDATA["C:\\Users\\erick\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Telefono.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="248" y="60" width="59" height="48" uuid="80cee979-294f-4973-93a7-ff748e0bd6f8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[5698-2516 6630-5504]]></text>
+			</staticText>
+			<image>
+				<reportElement x="349" y="17" width="55" height="31" uuid="aae194be-1407-48dd-a05b-1e9a770a89aa"/>
+				<imageExpression><![CDATA["C:\\Users\\erick\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Correo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="338" y="60" width="76" height="48" uuid="a0a2e76b-7ffc-42c7-b88d-3db2296fc269"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[hospitalbuenafe@gmail.com]]></text>
+			</staticText>
+			<image>
+				<reportElement x="-2" y="115" width="555" height="36" uuid="8d50b8e3-2ec7-4f2b-91f3-aa301e93dcf7"/>
+				<imageExpression><![CDATA["C:\\Users\\erick\\Documents\\NetBeansProjects\\HospitalInfectologia2018037\\src\\org\\erickguerra\\images\\Pie de pagina.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>
